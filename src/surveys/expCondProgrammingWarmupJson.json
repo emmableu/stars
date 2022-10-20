@@ -1,0 +1,81 @@
+{
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "paneldynamic",
+          "name": "question2",
+          "templateElements": [
+            {
+              "type": "matrixdropdown",
+              "name": "question4",
+              "title": "Now play the program. When you've completed playing it, it will show up a replayable trace. Select which event happens at which timestamp. ",
+              "columns": [
+                {
+                  "name": "Select Event",
+                  "cellType": "dropdown",
+                  "isRequired": true
+                },
+                {
+                  "name": "Start Timestamp",
+                  "cellType": "text",
+                  "isRequired": true
+                },
+                {
+                  "name": "End Timestamp",
+                  "cellType": "text",
+                  "isRequired": true
+                }
+              ],
+              "choices": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "rows": [
+                "Row 1",
+                "Row 2"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "matrixdropdown",
+          "name": "question1",
+          "title": "Now play the program. When you've completed playing it, it will show up a replayable trace. Select which event happens at which timestamp. ",
+          "columns": [
+            {
+              "name": "Select Event",
+              "cellType": "dropdown",
+              "isRequired": true
+            },
+            {
+              "name": "From Timestamp",
+              "cellType": "text",
+              "isRequired": true
+            },
+            {
+              "name": "To Timestamp",
+              "cellType": "text",
+              "isRequired": true
+            }
+          ],
+          "choices": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "rows": [
+            "Row 1",
+            "Row 2"
+          ]
+        }
+      ]
+    }
+  ]
+}
