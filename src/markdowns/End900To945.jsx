@@ -5,7 +5,7 @@ import React from 'react'
 const End900To945 = () => {
     return ( <>
         <h2 id="4-draw-your-own-box-on-the-self-introduction-board">4. Draw your own box on the self-introduction board</h2>
-        <p>Go to <a href="go.ncsu.edu/stars-slides">go.ncsu.edu/stars-slides</a> and you will see a page below</p>
+        <p>Go to <a href="https://go.ncsu.edu/stars-slides">https://go.ncsu.edu/stars-slides</a> and you will see a page below</p>
         <span className="hljs-bullet"></span>Fill in your box with: your name, and 3 of your favorite animals/sports/food/anything.
 <span className="hljs-bullet">- </span>You can download icons from <a href="https://flaticon.com">this site</a>
 
