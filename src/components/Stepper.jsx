@@ -4,11 +4,20 @@ import {makeStyles} from "@mui/styles";
 import TitleBar from "./TitleBar";
 import s900To945 from "../surveys/s900To945.json"
 import s945To1045 from "../surveys/s945To1045.json"
+import s11To12 from "../surveys/s11To12.json"
+import s1230To145 from "../surveys/s1230To145.json"
+import s2To3 from "../surveys/s2To3.json"
+import s315To430 from "../surveys/s315To430.json"
 import SurveyComponent from "./SurveyComponent";
 import CongratsPage from "./CongratsPage";
 import Start900To945 from "../markdowns/Start900To945";
 import End900To945 from "../markdowns/End900To945";
-import SnapIntro from "./SnapIntro";
+import SnapIntro from "../markdowns/SnapIntro";
+import Start11To12 from "../markdowns/Start11To12";
+import Start1230To145 from "../markdowns/Start1230To145";
+import Start200To430 from "../markdowns/Start315To430";
+import Start2To3 from "../markdowns/Start2To3";
+import Start315To430 from "../markdowns/Start315To430";
 
 
 const { Step } = Steps;
@@ -35,10 +44,9 @@ const surveyItemToCurrent = {
     "900-945": 0,
     "945-1045": 1,
     "11-12": 2,
-    "1230-100": 3,
-    "100-200": 4,
-    "200-300": 5,
-    "300-430": 6,
+    "1230-145": 3,
+    "2-3": 4,
+    "315-430": 5,
 }
 
 
@@ -86,16 +94,55 @@ const Stepper = () => {
                                      starterComponent={<SnapIntro/>}
             />
         },
-        // {
-        //     title: '11:00-12:00',
-        //     content: <SurveyComponent surveyJson={preSurveyJson}
-        //                               completedSurveyItemList={completedSurveyItemList}
-        //                               setCompletedSurveyItemList={setCompletedSurveyItemList}
-        //                               surveyItem="presurvey"
-        //                               setNextEnabled={setNextEnabled}
-        //
-        //     />,
-        // },
+        {
+            title: '11:00-12:00',
+            content: <SurveyComponent surveyJson={s11To12}
+                                      completedSurveyItemList={completedSurveyItemList}
+                                      setCompletedSurveyItemList={setCompletedSurveyItemList}
+                                      surveyItem="11-12"
+                                      setNextEnabled={setNextEnabled}
+                                      starterComponent={<Start11To12/>}
+
+            />,
+        },
+
+        {
+            title: '12:30 pm - 1:45 pm',
+            content: <SurveyComponent surveyJson={s1230To145}
+                                      completedSurveyItemList={completedSurveyItemList}
+                                      setCompletedSurveyItemList={setCompletedSurveyItemList}
+                                      surveyItem="1230-145"
+                                      setNextEnabled={setNextEnabled}
+                                      starterComponent={<Start1230To145/>}
+
+            />,
+        },
+
+
+        {
+            title: '2:00 pm - 3:00 pm',
+            content: <SurveyComponent surveyJson={s2To3}
+                                      completedSurveyItemList={completedSurveyItemList}
+                                      setCompletedSurveyItemList={setCompletedSurveyItemList}
+                                      surveyItem="2-3"
+                                      setNextEnabled={setNextEnabled}
+                                      starterComponent={<Start2To3/>}
+
+            />,
+        },
+
+
+        {
+            title: '3:15 pm - 4:30 pm',
+            content: <SurveyComponent surveyJson={s315To430}
+                                      completedSurveyItemList={completedSurveyItemList}
+                                      setCompletedSurveyItemList={setCompletedSurveyItemList}
+                                      surveyItem="315-430"
+                                      setNextEnabled={setNextEnabled}
+                                      starterComponent={<Start315To430/>}
+
+            />,
+        },
         // {
         //     title: 'Pre-Assessment',
         //     content: <SurveyComponent surveyJson={preAssessmentJson}

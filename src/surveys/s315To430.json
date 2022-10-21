@@ -1,0 +1,111 @@
+{
+  "logoPosition": "right",
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "rating",
+          "name": "question8",
+          "title": "How mentally demanding was the programming task?",
+          "isRequired": true
+        },
+        {
+          "type": "rating",
+          "name": "question10",
+          "title": "How physically demanding was the programming task?",
+          "isRequired": true
+        },
+        {
+          "type": "rating",
+          "name": "question9",
+          "title": "How hurried or rushed was the pace of the task?",
+          "isRequired": true
+        },
+        {
+          "type": "rating",
+          "name": "question11",
+          "title": "How successful were you in accomplishing what you planned to do?",
+          "isRequired": true
+        },
+        {
+          "type": "rating",
+          "name": "question12",
+          "title": "How hard did you have to work to accomplish your level of performance?",
+          "isRequired": true
+        },
+        {
+          "type": "rating",
+          "name": "question13",
+          "title": "How hard did you have to work to accomplish your level of performance?",
+          "isRequired": true
+        },
+        {
+          "type": "rating",
+          "name": "question14",
+          "title": "How insecure, discouraged, irritated, stressed, and annoyed were you?",
+          "isRequired": true
+        }
+      ],
+      "title": "Task Load Questions",
+      "description": "Rate your from very low (1) to very high (5))"
+    },
+    {
+      "name": "page2",
+      "elements": [
+        {
+          "type": "rating",
+          "name": "question1",
+          "title": "What I was able to produce was worth the effort I had to exert to produce it.",
+          "isRequired": true,
+          "rateValues": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "type": "rating",
+          "name": "question2",
+          "title": "I was able to be very expressive and creative while implementing my ideas.",
+          "isRequired": true
+        },
+        {
+          "type": "rating",
+          "name": "question3",
+          "title": "It was easy for me to explore many different ideas, options, designs, or outcomes during programming.",
+          "isRequired": true
+        },
+        {
+          "type": "rating",
+          "name": "question4",
+          "title": "My attention was fully tuned to the programming activity,  and I forgot about the system/tool that I was using. ",
+          "isRequired": true
+        },
+        {
+          "type": "rating",
+          "name": "question5",
+          "title": "I was very engaged in the programming activity - I enjoyed this activity and would do it again.",
+          "isRequired": true
+        },
+        {
+          "type": "rating",
+          "name": "question16",
+          "title": "It was helpful for me to be able to access code examples during programming.",
+          "isRequired": true
+        },
+        {
+          "type": "comment",
+          "name": "question7",
+          "visibleIf": "{question16} notempty",
+          "title": "Can you elaborate? Give an example or explain why.",
+          "isRequired": true
+        }
+      ],
+      "title": "Programming Experience Survey",
+      "description": "Rate your agreement with the following statements: (from highly disagree (1) to highly agree (5))"
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "logoPosition": "right",
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "rating",
+          "name": "question1",
+          "title": "What I was able to produce was worth the effort I had to exert to produce it.",
+          "isRequired": true,
+          "rateValues": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "type": "rating",
+          "name": "question2",
+          "title": "I was able to be very expressive and creative while doing the storyboarding.",
+          "isRequired": true
+        },
+        {
+          "type": "rating",
+          "name": "question3",
+          "title": "It was easy for me to explore many different ideas, options, designs, or outcomes.",
+          "isRequired": true
+        },
+        {
+          "type": "rating",
+          "name": "question4",
+          "title": "My attention was fully tuned to the storyboarding activity,  and I forgot about the system/tool that I was using. ",
+          "isRequired": true
+        },
+        {
+          "type": "rating",
+          "name": "question5",
+          "title": "I was very engaged in this storyboarding - I enjoyed this activity and would do it again.",
+          "isRequired": true
+        },
+        {
+          "type": "rating",
+          "name": "question6",
+          "title": "Looking at and selecting the example actors helped me generate better ideas for my project. ",
+          "isRequired": true
+        },
+        {
+          "type": "comment",
+          "name": "question7",
+          "visibleIf": "{question6} notempty",
+          "title": "Can you elaborate? Give an example or explain why.",
+          "isRequired": true
+        },
+        {
+          "type": "rating",
+          "name": "question8",
+          "title": "I enjoyed the design process of remixing different types of actors into my game design.",
+          "isRequired": true
+        },
+        {
+          "type": "comment",
+          "name": "question9",
+          "visibleIf": "{question8} notempty",
+          "title": "Can you elaborate? Give an example or explain why.",
+          "isRequired": true
+        },
+        {
+          "type": "rating",
+          "name": "question10",
+          "title": "I have storyboarded most of the ideas I had in my mind",
+          "isRequired": true
+        },
+        {
+          "type": "comment",
+          "name": "question11",
+          "visibleIf": "{question10} notempty",
+          "title": "What helped you to describe your ideas? Briefly describe a scenario.",
+          "isRequired": true
+        },
+        {
+          "type": "rating",
+          "name": "question12",
+          "title": "I have communicated my ideas well with my peers.",
+          "isRequired": true
+        },
+        {
+          "type": "comment",
+          "name": "question13",
+          "visibleIf": "{question12} notempty",
+          "title": "What helped you to communicate your ideas with your peers? Briefly describe a scenario.",
+          "isRequired": true
+        },
+        {
+          "type": "comment",
+          "name": "question14",
+          "visibleIf": "{question12} notempty",
+          "title": "What was difficult to express when you communicated your ideas with your peers? Briefly describe a scenario.",
+          "isRequired": true
+        },
+        {
+          "type": "rating",
+          "name": "apply_knowledge",
+          "title": "Idea Builder helped me come up with ideas that will require me to use my knowledge of programming.",
+          "isRequired": true
+        },
+        {
+          "type": "comment",
+          "name": "apply_knowledge_explain",
+          "visibleIf": "{apply_knowledge} notempty",
+          "title": "Give an example, or explain why.",
+          "isRequired": true
+        },
+        {
+          "type": "rating",
+          "name": "question15",
+          "title": "I feel excited about implementing the storyboards I just made.",
+          "isRequired": true
+        }
+      ],
+      "title": "Personal Creativity & Design Experience",
+      "description": "Rate your agreement with the following statements: (from highly disagree (1) to highly agree (5))"
+    }
+  ]
+}
