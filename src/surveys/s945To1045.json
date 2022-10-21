@@ -1,0 +1,21 @@
+{
+  "logoPosition": "right",
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "checkbox",
+          "name": "question1",
+          "title": "Confirm file submission:",
+          "choices": [
+            {
+              "value": "item3",
+              "text": "Yes, I confirm that you have submitted all of your completed programming files into the google drive folder: "
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -2,19 +2,13 @@ import React from 'react';
 import { Steps, Button, message } from 'antd';
 import {makeStyles} from "@mui/styles";
 import TitleBar from "./TitleBar";
-import preSurveyJson from "../surveys/preSurveyJson.json";
-import preAssessmentJson from "../surveys/preAssessmentJson.json";
-import postAssessmentJson from "../surveys/postAssessmentJson.json";
-import controlCondProgrammingWarmupJson from "../surveys/controlCondProgrammingWarmupJson.json";
-import decompositionJson from "../surveys/decompositionJson.json";
-import expDecompositionJson from "../surveys/expDecompositionJson.json";
-import integrationJson from "../surveys/integrationJson.json";
-import reflectionJson from "../surveys/reflectionJson.json";
-import consentJson from "../surveys/consentJson.json";
+import s900To945 from "../surveys/s900To945.json"
+import s945To1045 from "../surveys/s945To1045.json"
 import SurveyComponent from "./SurveyComponent";
-import Requirements from "./Requirements";
 import CongratsPage from "./CongratsPage";
-import globalConfig from "../globalConfig";
+import Start900To945 from "../markdowns/Start900To945";
+import End900To945 from "../markdowns/End900To945";
+import SnapIntro from "./SnapIntro";
 
 
 const { Step } = Steps;
@@ -38,15 +32,15 @@ const useStyles = makeStyles( theme => ({
 }))
 
 const surveyItemToCurrent = {
-    "consent": 0,
-    "presurvey": 2,
-    "pretest": 3,
-    "warmup": 4,
-    "decomposition": 5,
-    "integration": 6,
-    "reflection": 7,
-    "posttest": 8
+    "900-945": 0,
+    "945-1045": 1,
+    "11-12": 2,
+    "1230-100": 3,
+    "100-200": 4,
+    "200-300": 5,
+    "300-430": 6,
 }
+
 
 
 const Stepper = () => {
@@ -71,20 +65,29 @@ const Stepper = () => {
 
     const steps = [
         {
-            title: 'Consent Form',
-            content: <SurveyComponent surveyJson={consentJson}
+            title: '9:00-9:45',
+            content: <SurveyComponent surveyJson={s900To945}
                                       completedSurveyItemList={completedSurveyItemList}
                                       setCompletedSurveyItemList={setCompletedSurveyItemList}
-                                      surveyItem="consent"
+                                      surveyItem="900-945"
                                       setNextEnabled={setNextEnabled}
+                                      starterComponent={<Start900To945/>}
+                                      enderComponent={<End900To945/>}
+
             />,
         },
+        {
+            title: '9:45-10:45',
+            content:<SurveyComponent surveyJson={s945To1045}
+                                     completedSurveyItemList={completedSurveyItemList}
+                                     setCompletedSurveyItemList={setCompletedSurveyItemList}
+                                     surveyItem="945-1045"
+                                     setNextEnabled={setNextEnabled}
+                                     starterComponent={<SnapIntro/>}
+            />
+        },
         // {
-        //     title: 'Requirements',
-        //     content: <Requirements setNextEnabled={setNextEnabled}/>,
-        // },
-        // {
-        //     title: 'Pre-Survey',
+        //     title: '11:00-12:00',
         //     content: <SurveyComponent surveyJson={preSurveyJson}
         //                               completedSurveyItemList={completedSurveyItemList}
         //                               setCompletedSurveyItemList={setCompletedSurveyItemList}

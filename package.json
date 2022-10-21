@@ -1,6 +1,6 @@
 {
-  "name": "f22-study",
-  "homepage": "https://isnap.csc.ncsu.edu/f22-study/",
+  "name": "stars",
+  "homepage": "https://isnap.csc.ncsu.edu/stars/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

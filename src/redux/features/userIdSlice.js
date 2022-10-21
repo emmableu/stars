@@ -1,11 +1,12 @@
 import { createSlice} from '@reduxjs/toolkit'
 import Cookies from "js-cookie";
+import {isUserCreated} from "../../globalConfig";
 
 
 
 export const userIdSlice = createSlice({
     name: 'userIdSlice',
-    initialState: {data: Cookies.get("userId")},
+    initialState: {data: isUserCreated()?Cookies.get('userId'):undefined},
     reducers: {
         setUserId: (state, action) => {
             state.data = action.payload;

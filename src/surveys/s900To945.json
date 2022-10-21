@@ -1,0 +1,149 @@
+{
+  "title": "Pre-Survey",
+  "logoPosition": "right",
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "checkbox",
+          "name": "question1",
+          "title": "Have you completed any AP Computer Science classes in high school?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "item1",
+              "text": "AP Computer Science A"
+            },
+            {
+              "value": "item2",
+              "text": "AP Computer Science Principles"
+            }
+          ],
+          "showOtherItem": true
+        },
+        {
+          "type": "radiogroup",
+          "name": "question2",
+          "title": "Have you ever worked with the Scratch or Snap! programming environments? ",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "item1",
+              "text": "Yes, a few times"
+            },
+            {
+              "value": "item2",
+              "text": "Yes, more than a few times"
+            },
+            {
+              "value": "item3",
+              "text": "Yes, for 5+ hours"
+            },
+            {
+              "value": "item4",
+              "text": "Yes, for 1+ hour"
+            },
+            {
+              "value": "item5",
+              "text": "No, but I've worked with another similar environment"
+            }
+          ],
+          "showOtherItem": true
+        },
+        {
+          "type": "radiogroup",
+          "name": "question3",
+          "title": "How would you rate your prior experience with programming?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "item1",
+              "text": "I don't have any programming experience."
+            },
+            {
+              "value": "item2",
+              "text": "I have completed a few programming tutorials before (e.g. an Hour of Code activity)."
+            },
+            {
+              "value": "item3",
+              "text": "I've taken one course in programming."
+            },
+            {
+              "value": "item4",
+              "text": "I've taken two courses in programming."
+            },
+            {
+              "value": "item5",
+              "text": "I've taken more than two courses in programming."
+            },
+            {
+              "value": "item6",
+              "text": "I've learned programming myself."
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "question4",
+          "title": "What is your gender?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "item1",
+              "text": "Male"
+            },
+            {
+              "value": "item2",
+              "text": "Female"
+            },
+            {
+              "value": "item3",
+              "text": "Prefer not to say"
+            }
+          ],
+          "showOtherItem": true
+        },
+        {
+          "type": "radiogroup",
+          "name": "question5",
+          "title": "What is your race/ethnicity?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "item1",
+              "text": "American Indian or Native Alaskan"
+            },
+            {
+              "value": "item2",
+              "text": "Asian"
+            },
+            {
+              "value": "item3",
+              "text": "Black or African American"
+            },
+            {
+              "value": "item4",
+              "text": "Hispanic or Latino"
+            },
+            {
+              "value": "item5",
+              "text": "Native Hawaiian or Pacific Islander"
+            },
+            {
+              "value": "item6",
+              "text": "White"
+            },
+            {
+              "value": "item7",
+              "text": "Prefer not to say"
+            }
+          ],
+          "showOtherItem": true
+        }
+      ]
+    }
+  ],
+  "showQuestionNumbers": "off",
+  "checkErrorsMode": "onValueChanged"
+}

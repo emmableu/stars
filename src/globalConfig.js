@@ -1,27 +1,127 @@
-// const params = new URLSearchParams(window.location.search);
+import Cookies from "js-cookie";
 
-function getCondition(){
-    let localCondition = localStorage.getItem("condition")
-    let condition;
-    if (!localCondition) {
-        var num = Math.random();
-        if(num < 0.45) condition = "0";  //probability 0.3
-        else condition = "1";  //probability 0.1
-        localStorage.setItem("condition", condition)
+
+const cityMap =
+    {
+        study1: true,
+        study2: false,
+        asheville: true,
+        athens: false,
+        atlanta: true,
+        austin: false,
+        baltimore: true,
+        bellevue: false,
+        boston: true,
+        buffalo: false,
+        cambridge: true,
+        charleston: false,
+        chicago: true,
+        cincinnati: false,
+        cleveland: true,
+        fremont: false,
+        greenwich: true,
+        honolulu: false,
+        houston: true,
+        irvine: false,
+        ithaca: true,
+        louisville: false,
+        miami: true,
+        napa: false,
+        nashville: true,
+        newark: false,
+        oakland: true,
+        olympia: false,
+        philadelphia: true,
+        princeton: false,
+        providence: true,
+        richmond: false,
+        sacramento: true,
+        seattle: false,
+        spokane: true,
+        tacoma: false,
+        york: true
     }
-    else {
-        condition = localCondition;
-    }
-    console.log("condition: ", condition);
-    return condition;
+
+const cityList = [
+    "study1",
+    "study2",
+    "asheville",
+    "athens",
+    "atlanta",
+    "austin",
+    "baltimore",
+    "bellevue",
+    "boston",
+    "buffalo",
+    "cambridge",
+    "charleston",
+    "chicago",
+    "cincinnati",
+    "cleveland",
+    "fremont",
+    "greenwich",
+    "honolulu",
+    "houston",
+    "irvine",
+    "ithaca",
+    "louisville",
+    "miami",
+    "napa",
+    "nashville",
+    "newark",
+    "oakland",
+    "olympia",
+    "philadelphia",
+    "princeton",
+    "providence",
+    "richmond",
+    "sacramento",
+    "seattle",
+    "spokane",
+    "tacoma",
+    "york"
+]
+
+const getMmdd = () => {
+    let today = new Date();
+    const dd = String(today.getDate()).padStart(2, '0');
+    const mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    return mm + dd
 }
+
+const mmdd = getMmdd();
+
 
 const globalConfig = {
-    condition: getCondition(),
     testing: false,
+    mmdd: mmdd,
 }
+
+const getCondition = () => {
+    const userId = Cookies.get("userId")
+    if (userId.startsWith("j")) {
+        return false;
+    }
+    else {
+        return cityMap[userId]
+    }
+}
+
+const isUserCreated = () => {
+    const today_data = localStorage.getItem("mmdd");
+    if (!today_data) {
+        Cookies.remove("userId")
+        localStorage.setItem("completedSurveyItemList", []);
+        return false
+    }
+    else {
+        return true
+    }
+}
+
 
 Object.freeze(globalConfig);
 
+export {isUserCreated, cityList, cityMap, getCondition}
 export default globalConfig;
 

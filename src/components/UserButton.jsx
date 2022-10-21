@@ -66,45 +66,46 @@ const UserButton = () => {
     return (
         <div className={classes.root}>
             <div>
-                <Button
-                    color="inherit"
-                    ref={anchorRef}
-                    aria-controls={open ? 'menu-list-grow' : undefined}
-                    aria-haspopup="true"
-                    onClick={handleToggle}
-                    startIcon={<PersonOutlineOutlinedIcon />}>
-                    {userId}
-                </Button>
-                <Popper
-                    open={open}
-                    style={{zIndex: 1000}}
-                    anchorEl={anchorRef.current}
-                    role={undefined}
-                    transition
-                    disablePortal
-                >
-                    {({ TransitionProps, placement }) => (
-                        <Grow
-                            {...TransitionProps}
-                            style={{
-                                transformOrigin:
-                                    placement === 'bottom' ? 'center top' : 'center bottom'
-                            }}
-                        >
-                            <Paper>
-                                <ClickAwayListener onClickAway={handleClose}>
-                                    <MenuList
-                                        autoFocusItem={open}
-                                        id="menu-list-grow"
-                                        onKeyDown={handleListKeyDown}
-                                    >
-                                        <MenuItem onClick={handleClick}>Logout</MenuItem>
-                                    </MenuList>
-                                </ClickAwayListener>
-                            </Paper>
-                        </Grow>
-                    )}
-                </Popper>
+                {userId}
+                {/*<Button*/}
+                {/*    color="inherit"*/}
+                {/*    ref={anchorRef}*/}
+                {/*    aria-controls={open ? 'menu-list-grow' : undefined}*/}
+                {/*    aria-haspopup="true"*/}
+                {/*    onClick={handleToggle}*/}
+                {/*    startIcon={<PersonOutlineOutlinedIcon />}>*/}
+
+                {/*</Button>*/}
+                {/*<Popper*/}
+                {/*    open={open}*/}
+                {/*    style={{zIndex: 1000}}*/}
+                {/*    anchorEl={anchorRef.current}*/}
+                {/*    role={undefined}*/}
+                {/*    transition*/}
+                {/*    disablePortal*/}
+                {/*>*/}
+                {/*    {({ TransitionProps, placement }) => (*/}
+                {/*        <Grow*/}
+                {/*            {...TransitionProps}*/}
+                {/*            style={{*/}
+                {/*                transformOrigin:*/}
+                {/*                    placement === 'bottom' ? 'center top' : 'center bottom'*/}
+                {/*            }}*/}
+                {/*        >*/}
+                {/*            <Paper>*/}
+                {/*                <ClickAwayListener onClickAway={handleClose}>*/}
+                {/*                    <MenuList*/}
+                {/*                        autoFocusItem={open}*/}
+                {/*                        id="menu-list-grow"*/}
+                {/*                        onKeyDown={handleListKeyDown}*/}
+                {/*                    >*/}
+                {/*                        <MenuItem onClick={handleClick}>Logout</MenuItem>*/}
+                {/*                    </MenuList>*/}
+                {/*                </ClickAwayListener>*/}
+                {/*            </Paper>*/}
+                {/*        </Grow>*/}
+                {/*    )}*/}
+                {/*</Popper>*/}
             </div>
         </div>
     );
