@@ -99,12 +99,16 @@ const globalConfig = {
 
 const getCondition = () => {
     const userId = Cookies.get("userId")
+    console.log('userId: ', userId);
     if (userId.startsWith("j")) {
         return false;
     }
     else {
+        console.log('not starts with j');
         for (const city of cityList) {
+            console.log('çity: ', city);
             if (userId.startsWith(city)) {
+                console.log(userId, city)
                 return cityMap[userId]
             }
         }
