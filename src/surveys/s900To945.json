@@ -18,6 +18,10 @@
             {
               "value": "item2",
               "text": "AP Computer Science Principles"
+            },
+            {
+              "value": "item3",
+              "text": "I have not completed any AP Computer Science classes in high school."
             }
           ],
           "showOtherItem": true
