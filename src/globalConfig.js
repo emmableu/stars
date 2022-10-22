@@ -103,7 +103,12 @@ const getCondition = () => {
         return false;
     }
     else {
-        return cityMap[userId]
+        for (const city of cityList) {
+            if (userId.startsWith(city)) {
+                return cityMap[userId]
+            }
+        }
+        return false
     }
 }
 
