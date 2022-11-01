@@ -108,7 +108,7 @@ const AssentLoginPage = (props) => {
         if (curUserId === null) {
             return;
         }
-        Cookies.set("userId", curUserId);
+        localStorage.setItem("userId", curUserId);
         await new Promise(r => setTimeout(r, 100));
         dispatch(setUserId(curUserId));
     }

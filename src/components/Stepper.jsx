@@ -2,17 +2,17 @@ import React from 'react';
 import { Steps, Button, message } from 'antd';
 import {makeStyles} from "@mui/styles";
 import TitleBar from "./TitleBar";
-import s900To945 from "../surveys/s900To945.json"
-import s945To1045 from "../surveys/s945To1045.json"
+import s900To945 from "../surveys/WarmupSurvey.json"
+import s945To1045 from "../surveys/IntroSurvey.json"
 import s11To12 from "../surveys/s11To12.json"
 import s1230To145 from "../surveys/s1230To145.json"
 import s2To3 from "../surveys/s2To3.json"
 import s315To430 from "../surveys/s315To430.json"
 import SurveyComponent from "./SurveyComponent";
 import CongratsPage from "./CongratsPage";
-import Start900To945 from "../markdowns/Start900To945";
-import End900To945 from "../markdowns/End900To945";
-import SnapIntro from "../markdowns/SnapIntro";
+import WarmupStarter from "../markdowns/WarmupStarter";
+import WarmupEnder from "../markdowns/WarmupEnder";
+import IntroStarter from "../markdowns/IntroStarter";
 import Start11To12 from "../markdowns/Start11To12";
 import Start1230To145 from "../markdowns/Start1230To145";
 import Start200To430 from "../markdowns/Start315To430";
@@ -79,9 +79,6 @@ const Stepper = () => {
                                       setCompletedSurveyItemList={setCompletedSurveyItemList}
                                       surveyItem="900-945"
                                       setNextEnabled={setNextEnabled}
-                                      starterComponent={<Start900To945/>}
-                                      enderComponent={<End900To945/>}
-
             />,
         },
         {
@@ -91,7 +88,7 @@ const Stepper = () => {
                                      setCompletedSurveyItemList={setCompletedSurveyItemList}
                                      surveyItem="945-1045"
                                      setNextEnabled={setNextEnabled}
-                                     starterComponent={<SnapIntro/>}
+                                     starterComponent={<IntroStarter/>}
             />
         },
         {

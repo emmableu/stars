@@ -26,7 +26,7 @@ class Api {
     static async starsUpdate (key, value) {
         value["db_time"] = new Date().toString();
         value["condition"] = getCondition();
-        const userId = Cookies.get("userId");
+        const userId = localStorage.getItem("userId");
         const response = await axios({
             method: 'post',
             url: `/stars/${userId}`,

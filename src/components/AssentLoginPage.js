@@ -54,22 +54,13 @@ const AssentLoginPage = () => {
     const sendUserInit = (e) => {
         setLoading(true);
         Api.generateUserId({name, "consent": isConsent}).then(async r => {
-            localStorage.setItem("mmdd", globalConfig.mmdd);
+            localStorage.setItem('mmdd', globalConfig.mmdd)
             await new Promise(r => setTimeout(r, 100));
             setCurUserID(r.data);
             dispatch(setUserId(r.data));
             setLoading(false);
         })
 
-    }
-
-    const login = async (e) => {
-        if (curUserId === null) {
-            return;
-        }
-        Cookies.set("userId", curUserId);
-        await new Promise(r => setTimeout(r, 100));
-        dispatch(setUserId(curUserId));
     }
 
     const confirmConsent = () => {

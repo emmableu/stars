@@ -6,11 +6,13 @@ import {isUserCreated} from "../../globalConfig";
 
 export const userIdSlice = createSlice({
     name: 'userIdSlice',
-    initialState: {data: isUserCreated()?Cookies.get('userId'):undefined},
+    initialState: {data: isUserCreated()?localStorage.getItem('userId'):undefined},
     reducers: {
         setUserId: (state, action) => {
             state.data = action.payload;
+            localStorage.setItem("userId", action.payload);
             Cookies.set("userId", action.payload);
+            Cookies.set("snapIDHash", action.payload);
         },
         clearUserId: (state, action) => {
             state.data = undefined;

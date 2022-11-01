@@ -98,7 +98,7 @@ const globalConfig = {
 }
 
 const getCondition = () => {
-    const userId = Cookies.get("userId")
+    const userId = localStorage.getItem("userId")
     console.log('userId: ', userId);
     if (userId.startsWith("j")) {
         return false;
@@ -118,7 +118,9 @@ const getCondition = () => {
 
 const isUserCreated = () => {
     const today_data = localStorage.getItem("mmdd");
-    if (!today_data) {
+    console.log("today_data: ", today_data)
+    console.log('mmdd: ', mmdd)
+    if (!today_data || today_data !== mmdd) {
         Cookies.remove("userId")
         localStorage.setItem("completedSurveyItemList", []);
         return false

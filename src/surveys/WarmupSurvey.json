@@ -1,13 +1,53 @@
 {
-  "title": "Pre-Survey",
   "logoPosition": "right",
   "pages": [
     {
       "name": "page1",
       "elements": [
         {
+          "type": "text",
+          "name": "email",
+          "title": "A google account is needed for today’s study. Click on the sign in button at the top right part of the chrome page, and sign in / create a new account. When you are done, please enter your new email address below.",
+          "isRequired": true
+        },
+        {
+          "type": "html",
+          "name": "question8",
+          "readOnly": true,
+          "html": "        <p id=\"2-find-your-user-id-on-the-top-right-of-this-site-\">Find your user id on the top right of this site:</p>\n        <p><img width=\"300\" alt=\"image\" src=\"https://user-images.githubusercontent.com/41789327/197143992-03611623-0004-490a-8046-c01d2c9565d3.png\"/></p>\n        <p>It should look like a <code>city name + today&#39;s date</code>, such as: <code>raleigh1022</code></p>\n        <p>This is your <strong>unique user ID</strong>. To protect your privacy, please use this user id, <em>not your own name</em>, to sign up to all softwares that we will use today. </p>\n\n\n"
+        },
+        {
+          "type": "text",
+          "name": "user_id",
+          "title": "Please type your unique user ID below to confirm that you have understood to use this user id, NOT your own name, to sign up to all softwares that we will use today. ",
+          "isRequired": true
+        },
+        {
+          "type": "html",
+          "name": "question2",
+          "html": "<h5 class=\"sv-title sv-question__title sv-question__title--required\" id=\"sq_198_ariaTitle2\">\nPlease create your personal folder in this Google Drive link <a href=\"https://go.ncsu.edu/stars-submit\">https://go.ncsu.edu/stars-submit</a>. Your folder should be named under your unique user ID (e.g., raleigh1022).  \n</h5>"
+        },
+        {
           "type": "checkbox",
-          "name": "question1",
+          "name": "confirm_folder_created",
+          "title": "When you are done, please confirm:",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "item3",
+              "text": "I confirm that I have created my personal folder using my unique user ID.  "
+            }
+          ]
+        }
+      ],
+      "title": "Starter Tasks"
+    },
+    {
+      "name": "page2",
+      "elements": [
+        {
+          "type": "checkbox",
+          "name": "have_completed_ap",
           "title": "Have you completed any AP Computer Science classes in high school?",
           "isRequired": true,
           "choices": [
@@ -28,7 +68,7 @@
         },
         {
           "type": "radiogroup",
-          "name": "question2",
+          "name": "worked_with_snap",
           "title": "Have you ever worked with the Scratch or Snap! programming environments? ",
           "isRequired": true,
           "choices": [
@@ -45,10 +85,6 @@
               "text": "Yes, for 5+ hours"
             },
             {
-              "value": "item4",
-              "text": "Yes, for 1+ hour"
-            },
-            {
               "value": "item5",
               "text": "No, but I've worked with another similar environment"
             }
@@ -57,7 +93,7 @@
         },
         {
           "type": "radiogroup",
-          "name": "question3",
+          "name": "self_rate_prior_experience",
           "title": "How would you rate your prior experience with programming?",
           "isRequired": true,
           "choices": [
@@ -80,16 +116,12 @@
             {
               "value": "item5",
               "text": "I've taken more than two courses in programming."
-            },
-            {
-              "value": "item6",
-              "text": "I've learned programming myself."
             }
           ]
         },
         {
           "type": "radiogroup",
-          "name": "question4",
+          "name": "gender",
           "title": "What is your gender?",
           "isRequired": true,
           "choices": [
@@ -110,7 +142,7 @@
         },
         {
           "type": "radiogroup",
-          "name": "question5",
+          "name": "race",
           "title": "What is your race/ethnicity?",
           "isRequired": true,
           "choices": [
@@ -145,7 +177,32 @@
           ],
           "showOtherItem": true
         }
-      ]
+      ],
+      "title": "Pre-Survey"
+    },
+    {
+      "name": "page3",
+      "elements": [
+        {
+          "type": "html",
+          "name": "question6",
+          "readOnly": true,
+          "html": " <p>Go to <a href=\"https://go.ncsu.edu/stars-slides\">https://go.ncsu.edu/stars-slides</a> and you will see a page below</p>\n        <span className=\"hljs-bullet\"></span>Fill in your box with: your name, and 3 of your favorite animals/sports/food/anything.\n<span className=\"hljs-bullet\">- </span>You can download icons from <a href=\"https://flaticon.com\">this site</a>\n\n        <p><img style={{width:\"70%\"}} src=\"https://raw.githubusercontent.com/emmableu/image/master/202210210047785.png\" width=\"500px\"alt=\"\"/></p>"
+        },
+        {
+          "type": "checkbox",
+          "name": "confirm_finished_drawing",
+          "title": "Confirm that you have finished: ",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "item1",
+              "text": "I confirm that I have finished drawing my own self-introduction box"
+            }
+          ]
+        }
+      ],
+      "title": "Draw your own box on the self-introduction board"
     }
   ],
   "showQuestionNumbers": "off",
